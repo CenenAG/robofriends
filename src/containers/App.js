@@ -7,7 +7,6 @@ import ErrorBoundry from '../components/ErrorBoundry';
 import './App.css';
 
 import { setSearchField } from '../actions'
-import { searchRobots } from '../reducers';
 
 const mapStateToProps = state => {
     return {
@@ -16,6 +15,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = (dispatch) => {
+    console.log('dispara pone searchField')
     return {
         onSearchChange: (event) => dispatch(setSearchField(event.target.value))
     }
